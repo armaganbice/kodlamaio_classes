@@ -6,7 +6,6 @@ public class Main {
 		// TODO Auto-generated method stub
 		Category category=new Category("Programlama");
 		
-		Course[] courses;
 		Course course1=new Course();
 		course1.id=1;
 		course1.categoryId=1;
@@ -28,10 +27,15 @@ public class Main {
 		course3.instructorName="Engin Demiroğ";
 		course3.completionRate=100;
 		
+		Course[] courses= {course1,course2,course3};
 		CourseManager courseManager=new CourseManager();
 		courseManager.Add(course1);
 		courseManager.Add(course2);
 		courseManager.Add(course3);
+		for(Course course : courses)
+		{
+			System.out.println(course.name+" "+course.instructorName);
+		}
 	}
 
 }
